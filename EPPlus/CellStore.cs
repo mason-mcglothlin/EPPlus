@@ -1465,10 +1465,10 @@ using OfficeOpenXml;
                 }
             }
             //Find Split pos
-            int splitPos=0;
+            int splitPos=0;            
             for (int r = 0; r < page.RowCount; r++)
             {
-                if (page.Rows[r].Index > PageSize)            
+                if (page.Rows[r].Index > PageSize)
                 {
                     splitPos=r;
                     break;
@@ -1675,7 +1675,7 @@ using OfficeOpenXml;
                     return NextCell(ref row, ref col, minRow, minColPos, maxRow, maxColPos);
                 }
                 else
-                {
+                {                    
                     var r=GetNextCell(ref row, ref c, minColPos, maxRow, maxColPos);
                     col = _columnIndex[c].Index;
                     return r;
